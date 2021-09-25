@@ -43,25 +43,25 @@ class Messages:
         ]
     
     ABOUT_MSG = """__Hiya👋 {}__,
-**   
-➠My Name : Google Drive Uploader
+  
+➠ **My Name : Google Drive Uploader**
 
-➠ Creator : @OO7ROBot
+➠** Creator : @OO7ROBot**
 
-➠ Channel : @MyTestBotz
+➠** Channel : @MyTestBotZ**
 
-➠ Credits : Everyone in this journey , Adnan Ahmad
+➠** Credits : Everyone in this journey , Adnan Ahmad**
 
-➠ Language : Python 
+➠** Language : Python **
 
-➠ Library : Pyrogram 1.0.1
+➠** Library : Pyrogram 1.0.1**
 
-➠ Cloned From : viperadnan Source
+➠** Cloned From : viperadnan Source**
 
-➠ Server : Heroku
+➠** Server : Heroku**
 
-➠ Build Status : Beta V2
-**"""
+➠** Build Status : Beta V2**
+"""
      
     RATE_LIMIT_EXCEEDED_MESSAGE = "❗ **Rate Limit Exceeded.**\n__User rate limit exceeded try after 24 hours.__"
     
