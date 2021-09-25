@@ -21,7 +21,7 @@ TB = [
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']), group=2)
 def _start(client, message):
            
-    if UPDATE_CHANNEL="MyTestBotZ":
+    if UPDATE_CHANNEL = "MyTestBotZ":
         try:
             user = await bot.get_chat_member(UPDATE_CHANNEL, update.from_user.id)
             if user.status == "kicked":
@@ -35,9 +35,9 @@ def _start(client, message):
             return
            
            
-    forcesub = ForceSub(client, message)
-    if forcesub == 400:
-        return
+    #forcesub = ForceSub(client, message)
+    #if forcesub == 400:
+        #return
     client.send_message(chat_id = message.chat.id,
         text = tr.START_MSG.format(message.from_user.mention),
         reply_markup = InlineKeyboardMarkup(TB),                 
