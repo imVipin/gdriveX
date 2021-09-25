@@ -3,6 +3,10 @@ from pyrogram import Client, filters
 from bot.config import Messages as tr
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
+
+from bot.helpers.forcesub import ForceSub
+
+
 TB = [
            [
              InlineKeyboardButton(text = 'Creator', url = "https://t.me/OO7ROBot"),
@@ -14,6 +18,9 @@ TB = [
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']), group=2)
 def _start(client, message):
+    forcesub = await ForceSub(client, message)
+    if forcesub == 400:
+        return
     client.send_message(chat_id = message.chat.id,
         text = tr.START_MSG.format(message.from_user.mention),
         reply_markup = InlineKeyboardMarkup(TB),                 
