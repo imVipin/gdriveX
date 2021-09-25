@@ -25,6 +25,7 @@ def _start(client, message):
 def _about(client, message):
         client.send_message(chat_id = message.chat.id,
                                     text = tr.ABOUT_MSG.format(message.from_user.mention),
+                                    reply_markup = InlineKeyboardMarkup(TB),
                                     reply_to_message_id = message.message_id
                            )
         
@@ -52,7 +53,7 @@ def help_answer(c, callback_query):
 def map(pos):
     if(pos==1):
         button = [
-            [InlineKeyboardButton(text = '⇨', callback_data = "help+2")]
+            [InlineKeyboardButton(text = 'Next⇨', callback_data = "help+2")]
         ]
     elif(pos==len(tr.HELP_MSG)-1):
 
@@ -61,14 +62,14 @@ def map(pos):
              InlineKeyboardButton(text = '©️Update Channel', url = "https://t.me/MyTestBotZ"),
              InlineKeyboardButton(text = 'Other bots', url = "https://t.me/mybotzlist")
             ],
-            [InlineKeyboardButton(text = '⇦', callback_data = f"help+{pos-1}")]
+            [InlineKeyboardButton(text = '⇦Back', callback_data = f"help+{pos-1}")]
 
         ]
     else:
         button = [
             [
-                InlineKeyboardButton(text = '⇦', callback_data = f"help+{pos-1}"),
-                InlineKeyboardButton(text = '⇨', callback_data = f"help+{pos+1}")
+                InlineKeyboardButton(text = '⇦Back', callback_data = f"help+{pos-1}"),
+                InlineKeyboardButton(text = 'Next⇨', callback_data = f"help+{pos+1}")
             ],
         ]
     return button
