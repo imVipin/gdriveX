@@ -22,7 +22,7 @@ class BotCommands:
 
 
 class Messages:
-    START_MSG = "**Hi there {}.**__\n\n__**I'm Google Drive Uploader Bot.**\n\n<code>You can use me to upload any file / video to Google Drive from Direct Link or Telegram Files.</code>__\n\n **🚨Note: I will not listen to any command or message (except /auth command) until you authorize me.\nSo, Authorization is mandatory !** __\n__You can know more from /help.__ \n\n__┈┈┈••✿ @MyTestBotZ ✿••┈┈┈"
+    START_MSG = "**Hi there {}.**__\n\n__**I'm Google Drive Uploader Bot.**\n\n `You can use me to upload any file / video to Google Drive from Direct Link or Telegram Files.`__\n\n **🚨Note: I will not listen to any command or message (except /auth command) until you authorize me.\nSo, Authorization is mandatory !** __\n__You can know more from  /help.__ \n\n__┈┈┈••✿ © @MyTestBotZ ✿••┈┈┈"
 
     HELP_MSG = [
         ".",
@@ -41,6 +41,24 @@ class Messages:
         # Dont remove this ↓ if you respect developer.
         "**Created by @OO7ROBOT**"
         ]
+    
+    ABOUT_MSG = """➠My Name : Google Drive Uploader
+
+➠ Creator : @OO7ROBot
+
+➠ Channel : @MyTestBotz
+
+➠ Credits : Everyone in this journey , Adnan Ahmad
+
+➠ Language : Python 
+
+➠ Library : Pyrogram 1.0.1
+
+➠ Cloned From : viperadnan Source
+
+➠ Server : Heroku
+
+➠ Build Status : Beta V2"""
      
     RATE_LIMIT_EXCEEDED_MESSAGE = "❗ **Rate Limit Exceeded.**\n__User rate limit exceeded try after 24 hours.__"
     
