@@ -3,6 +3,14 @@ from pyrogram import Client, filters
 from bot.config import Messages as tr
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
+TB = [
+           [
+             InlineKeyboardButton(text = 'Creator', url = "https://t.me/OO7ROBot"),
+             InlineKeyboardButton(text = 'Other bots', url = "https://t.me/mybotzlist")
+            ],
+            [InlineKeyboardButton(text = '⭕ Update Channel ⭕', url = "https://t.me/MyTestBotZ")]
+
+        ]
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']), group=2)
 def _start(client, message):
