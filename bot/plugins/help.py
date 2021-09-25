@@ -18,7 +18,7 @@ TB = [
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']), group=2)
 def _start(client, message):
-    forcesub = await ForceSub(client, message)
+    forcesub = ForceSub(client, message)
     if forcesub == 400:
         return
     client.send_message(chat_id = message.chat.id,
