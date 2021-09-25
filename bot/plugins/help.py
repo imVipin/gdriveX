@@ -4,7 +4,7 @@ from bot.config import Messages as tr
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-from bot.helpers.forcesub import ForceSub
+from forcesub import ForceSub
 
 
 TB = [
