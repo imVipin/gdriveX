@@ -11,7 +11,15 @@ def _start(client, message):
         reply_to_message_id = message.message_id
     )
 
-
+    
+@Client.on_message(filters.private & filters.incoming & filters.command(['start']), group=2)
+def _about(client, message):
+        client.send_message(chat_id = message.chat.id,
+                                    text = tr.ABOUT_MSG.format(message.from_user.mention),
+                                    reply_to_message_id = message.message_id
+                           )
+        
+        
 @Client.on_message(filters.private & filters.incoming & filters.command(['help']), group=2)
 def _help(client, message):
     client.send_message(chat_id = message.chat.id,
