@@ -22,7 +22,7 @@ class BotCommands:
 
 
 class Messages:
-    START_MSG = "**Hi there {}.**__\n\n__**I'm Google Drive Uploader Bot.**\n\n `You can use me to upload any file / video to Google Drive from Direct Link or Telegram Files.`__\n\n **🚨Note: I will not listen to any command or message (except /auth command) until you authorize me.\nSo, Authorization is mandatory !** __\n__You can know more from  /help.__ \n\n__┈┈┈••✿ © @MyTestBotZ ✿••┈┈┈"
+    START_MSG = "**Hi there {}.**__\n\n__**I'm Google Drive Uploader Bot.**\n\n `You can use me to upload any file / video to Google Drive from Direct Link or Telegram Files.`\n\n **🚨Note: I will not listen to any command or message (except /auth command) until you authorize me.\nSo, Authorization is mandatory !** __\n__You can know more from  /help.__ \n\n__┈┈┈••✿ © @MyTestBotZ ✿••┈┈┈"
 
     HELP_MSG = [
         ".",
@@ -42,7 +42,7 @@ class Messages:
         "**Created by @OO7ROBOT**"
         ]
     
-    ABOUT_MSG = """__Hiya👋 {}__,
+    ABOUT_MSG = """Hiya👋 {},
   
 ➠ **My Name : Google Drive Uploader**
 
