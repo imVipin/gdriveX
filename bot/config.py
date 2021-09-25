@@ -42,7 +42,9 @@ class Messages:
         "**Created by @OO7ROBOT**"
         ]
     
-    ABOUT_MSG = """➠My Name : Google Drive Uploader
+    ABOUT_MSG = """__Hiya👋 {}__,
+**   
+➠My Name : Google Drive Uploader
 
 ➠ Creator : @OO7ROBot
 
@@ -58,7 +60,8 @@ class Messages:
 
 ➠ Server : Heroku
 
-➠ Build Status : Beta V2"""
+➠ Build Status : Beta V2
+**"""
      
     RATE_LIMIT_EXCEEDED_MESSAGE = "❗ **Rate Limit Exceeded.**\n__User rate limit exceeded try after 24 hours.__"
     
