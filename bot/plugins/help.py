@@ -7,6 +7,7 @@ from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 
 
 from forcesub import ForceSub
+UPDATE_CHANNEL="MYTESTBOTZ"
 
 
 TB = [
@@ -21,7 +22,7 @@ TB = [
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']), group=2)
 def _start(client, message):
            
-    if UPDATE_CHANNEL = "MyTestBotZ":
+    if UPDATE_CHANNEL:
         try:
             user = await bot.get_chat_member(UPDATE_CHANNEL, update.from_user.id)
             if user.status == "kicked":
