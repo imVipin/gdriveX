@@ -2,6 +2,8 @@ from bot import SUPPORT_CHAT_LINK
 from pyrogram import Client, filters
 from bot.config import Messages as tr
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+#from pyrogram import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 
 
 from forcesub import ForceSub
@@ -18,6 +20,21 @@ TB = [
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']), group=2)
 def _start(client, message):
+           
+    if UPDATE_CHANNEL="MyTestBotZ":
+        try:
+            user = await bot.get_chat_member(UPDATE_CHANNEL, update.from_user.id)
+            if user.status == "kicked":
+              await bot.edit_message_text(text="You are Banned", message_id=fmsg.message_id)
+              return
+        except UserNotParticipant:
+            await bot.edit_message_text(chat_id=update.chat.id, text="join my update channel", message_id=fmsg.message_id, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/MyTestBotZ")]]))
+            return
+        except Exception:
+            await bot.edit_message_text(chat_id=update.chat.id, text="something wrong", message_id=fmsg.message_id)
+            return
+           
+           
     forcesub = ForceSub(client, message)
     if forcesub == 400:
         return
